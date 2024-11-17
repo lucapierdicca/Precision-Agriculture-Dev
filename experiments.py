@@ -1,0 +1,185 @@
+OG_N1 = {
+    "name": f"OG_N1",
+    "params": [
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="OG", cluster_radius=5, news_inference_type="Bypass",
+             map_type="gaussian", planner_type="selfish", env_type="adhoc",
+             x="BL", y="BL", altitude=0, n_agents=1, centralized=False, n_runs=20, n_steps=300, render=False),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="OG", cluster_radius=5, news_inference_type="Bypass",
+             map_type="gaussian", planner_type="random", env_type="adhoc",
+             x="BL", y="BL", altitude=0, n_agents=1, centralized=False, n_runs=20, n_steps=300, render=False),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="OG", cluster_radius=5, news_inference_type="Bypass",
+             map_type="gaussian", planner_type="sweep", env_type="adhoc",
+             x="BL", y="BL", altitude=0, n_agents=1, centralized=False, n_runs=20, n_steps=300, render=False),
+
+    ]}
+
+FG_N1 = {
+    "name": f"check_FG_N1_adaptive_z_pearson_1",
+    "params": [
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=0,news_inference_type="Bypass",
+             map_type="gaussian",  planner_type="selfish", env_type="adhoc",
+             altitude=2, n_agents=1, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="adaptive", p_eq=0.5),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=1,news_inference_type="Bypass",
+             map_type="gaussian", planner_type="selfish", env_type="adhoc",
+             altitude=2, n_agents=1, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="adaptive", p_eq=0.5),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=2,news_inference_type="Bypass",
+             map_type="gaussian", planner_type="selfish", env_type="adhoc",
+             altitude=2, n_agents=1, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="adaptive", p_eq=0.5),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=3,news_inference_type="Bypass",
+             map_type="gaussian", planner_type="selfish", env_type="adhoc",
+             altitude=2, n_agents=1, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="adaptive", p_eq=0.5),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=4,news_inference_type="Bypass",
+             map_type="gaussian", planner_type="selfish", env_type="adhoc",
+             altitude=3, n_agents=1, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="adaptive", p_eq=0.5),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=5,news_inference_type="Bypass",
+             map_type="gaussian", planner_type="selfish", env_type="adhoc",
+             altitude=2, n_agents=1, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="adaptive", p_eq=0.5),
+
+    ]}
+
+
+
+N = 1
+r = 5
+multi = {
+    "name": f"a_z_N{N}_r{r}_random_pos_var",
+    "params": [
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="selfish", radius_multiplier=5, env_type="adhoc",
+        #      news_inference_type="Bypass",
+        #      x="BL", y="BL", altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="equal"),
+        #
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=5, env_type="adhoc",
+        #      news_inference_type="Bypass",
+        #      x="BL", y="BL", altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="equal"),
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=5, env_type="adhoc",
+        #      news_inference_type="LBP_single",
+        #      x="BL", y="BL", altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="equal"),
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=5, env_type="adhoc",
+        #      news_inference_type="LBP_multi",
+        #      x="BL", y="BL", altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="equal"),
+        #
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+        #      news_inference_type="Bypass",
+        #      x="BL", y="BL", altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="equal"),
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+        #      news_inference_type="LBP_single",
+        #      x="BL", y="BL", altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="equal"),
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+        #      news_inference_type="LBP_multi",
+        #      x="BL", y="BL", altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False, weights_type="equal"),
+
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="selfish", radius_multiplier=5, env_type="adhoc",
+        #      news_inference_type="Bypass",
+        #      altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+        #      weights_type="adaptive"),
+        #
+        # dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+        #      map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=5, env_type="adhoc",
+        #      news_inference_type="Bypass",
+        #      altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+        #      weights_type="adaptive"),
+
+
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="selfish", radius_multiplier=5, env_type="adhoc",
+             news_inference_type="Bypass",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="selfish", radius_multiplier=5, env_type="adhoc",
+             news_inference_type="LBP_single",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="selfish", radius_multiplier=5, env_type="adhoc",
+             news_inference_type="LBP_multi",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="selfish", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="Bypass",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="selfish", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_single",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="selfish", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_multi",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=5, env_type="adhoc",
+             news_inference_type="Bypass",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=5, env_type="adhoc",
+             news_inference_type="LBP_single",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=5, env_type="adhoc",
+             news_inference_type="LBP_multi",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="Bypass",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_single",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=r,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_multi",
+             altitude=0, n_agents=N, centralized=False, n_runs=10, n_steps=100, render=False,
+             weights_type="adaptive"),
+    ]}
+
+check = {
+    "name": f"check",
+    "params": [
+
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=5,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_multi",
+              altitude=0, n_agents=1, centralized=False, n_runs=20, n_steps=100, render=False,
+             weights_type="adaptive", p_eq=0.7),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=5,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_multi",
+              altitude=0, n_agents=2, centralized=False, n_runs=20, n_steps=100, render=False,
+             weights_type="adaptive", p_eq=0.7),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=5,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_multi",
+              altitude=0, n_agents=4, centralized=False, n_runs=20, n_steps=100, render=False,
+             weights_type="adaptive", p_eq=0.7),
+        dict(a0=1.0, a1=1.0, b0=0.015, b1=0.015, inference_type="LBP_cts_vectorized", cluster_radius=5,
+             map_type="gaussian", planner_type="mine_IoU_async_no_pred", radius_multiplier=16, env_type="adhoc",
+             news_inference_type="LBP_multi",
+              altitude=0, n_agents=8, centralized=False, n_runs=20, n_steps=100, render=False,
+             weights_type="adaptive", p_eq=0.7),
+
+    ]}
+
+
+
+
